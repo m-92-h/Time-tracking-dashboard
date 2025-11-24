@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,500;1,500&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+:root {
+    /* Primary Colors */
+    --Purple-600: hsl(246, 80%, 60%);
+    --Orange-300: hsl(15, 100%, 70%);
+    --Blue-300  : hsl(195, 74%, 62%);
+    --Pink-400  : hsl(348, 100%, 68%);
+    --Green-400 : hsl(145, 58%, 55%);
+    --Purple-700: hsl(264, 64%, 52%);
+    --Yellow-300: hsl(43, 84%, 65%);
+    
+    /* Neutral Colors */
+    --Navy-950: hsl(226, 43%, 10%);
+    --Navy-900: hsl(235, 46%, 20%);
+    --Purple-500: hsl(235, 45%, 61%);
+    --Navy-200: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik',sans-serif;
+}
+
+body {
+    background-color: var(--Navy-950);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* section-left */
+.section-left {
+    background-color: var(--Navy-900);
+    color: var(--Navy-200);
+    border-radius: 10px;
+    margin-right: 35px;
+    height: 375px;
+    width: 200px;
+}
+.portpolio {
+    background-color: var(--Purple-600);
+    border-radius: 10px 10px 15px 15px;
+    padding: 20px;
+    height: 220px;
+    max-width: 100%;
+}
+.portpolio img {
+    width: 4em;
+    height: 4em;
+    border: 3px solid var(--Navy-200);
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.portpolio p {
+    font-size: 14px;
+}
+.portpolio h2 {
+    font-size: 34px;
+    font-weight: 300;
+    color: white;
+    padding: 5px 0;
+    margin-left: 15px;
+}
+.date-details {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 20px;
+}
+.date-details h4 {
+    margin: 10px 0;
+    cursor: pointer;
+    color: var(--Purple-500);
+    font-weight: 400;
+}
+.date-details h4.active {
+    color: white;
+    font-weight: 500;
+}
+
+/* section-right */
+.section-right {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 700px;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.card-header {
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+.background-card {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+.background-card img {
+    width: 4em;
+    height: 4em;
+    margin-right: 10px;
+    position: absolute;
+    top: -10px;
+}
+
+.card-details {
+    padding: 20px;
+    background-color: var(--Navy-900);
+    color: var(--Navy-200);
+    border-radius: 10px;
+    width: 202px;
+    position: absolute;
+    top: 40px;
+    left: -1px;
+    cursor: pointer;
+}
+.card-details:hover {
+    background-color: var(--Purple-600);
+    transition: background-color .1s ease;
+}
+.option-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.option-card p {
+    font-weight: 300;
+}
+.option-card img {
+    width: 20px;
+    height: 5px;
+    cursor: pointer;
+}
+.title-card h1 {
+    margin: 10px 0;
+    font-weight: 400;
+    color: white;
+}
+.title-card h5 {
+    font-weight: 300;
+}
+
+/* style background color for cards */
+#card-Work {
+    background-color: var(--Orange-300);
+}
+#card-Play {
+    background-color: var(--Blue-300);
+}
+#card-Study {
+    background-color: var(--Pink-400);
+}
+#card-Exercise {
+    background-color: var(--Green-400);
+}
+#card-Social {
+    background-color: var(--Purple-700);
+}
+#card-SelfCare {
+    background-color: var(--Yellow-300);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    /* style section-left */
+    .section-left {
+        margin-right: 0;
+        margin-top: 50px;
+        height: 190px;
+        width: 80%;
+    }
+    .portpolio {
+        display: flex;
+        align-items: center;
+        height: 130px;
+    }
+    .portpolio img {
+        margin-right: 15px;
+    }
+    .portpolio p {
+        font-size: 14px;
+    }
+    .portpolio h2 {
+        font-size: 24px;
+        font-weight: 300;
+        padding: 0;
+        margin-left: 0;
+    }
+    .date-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    .date-details h4 {
+        margin: 20px 0;
+    }
+
+    /* style section-right */
+    .section-right {
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 300px;
+    }
+    .card-details {
+        padding: 20px;
+        width: 302px;
+    }
+    .option-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+    }
+    .option-card img {
+        width: 20px;
+        height: 5px;
+    }
+    .card-details h1 {
+        margin: 10px 0;
+        float: left;
+    }
+    .title-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
